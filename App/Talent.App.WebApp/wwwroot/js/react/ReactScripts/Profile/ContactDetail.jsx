@@ -117,8 +117,14 @@ export class IndividualDetailSection extends Component {
 
     renderDisplay() {
 
-        let firstName = this.props.details ? `${this.props.details.firstName}` : ""
-        let lastName = this.props.details ? `${this.props.details.lastName}` : ""
+        let firstName = '';
+        let lastName = '';
+        if (this.props.details) {
+            firstName = this.props.details.firstName ? `${this.props.details.firstName}` : ""
+            lastName = this.props.details.lastName ? `${this.props.details.lastName}` : ""
+        }
+        
+        
         let email = this.props.details ? this.props.details.email : ""
         let phone = this.props.details ? this.props.details.phone : ""
         
